@@ -1,0 +1,23 @@
+databaseChangeLog:
+    - changeSet:
+        id: 202106211735
+        author: rustam
+        changes:
+          - createTable:
+              columns:
+                - column:
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      primaryKeyName: consumer_key
+                    name: id
+                    type: bigint
+                - column:
+                    constraints:
+                      unique: true
+                    name: name
+                    type: varchar(255)
+                - column:
+                    name: password
+                    type: varchar(255)
+              tableName: user
