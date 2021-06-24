@@ -1,0 +1,9 @@
+databaseChangeLog:
+    - changeSet:
+        id: 202106211735
+        author: rustam
+        changes:
+          - renameTable:
+              newTableName: users
+              oldTableName: user
+              schemaName: auth
